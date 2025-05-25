@@ -1,0 +1,86 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f7ff',
+          100: '#e0effe',
+          200: '#bae0fd',
+          300: '#7cc6fb',
+          400: '#36a9f7',
+          500: '#0d8de4',
+          600: '#006fc2',
+          700: '#015a9e',
+          800: '#064b81',
+          900: '#0a406c',
+          950: '#072949',
+        },
+        accent: {
+          50: '#fbf2ff',
+          100: '#f7e6ff',
+          200: '#f0cfff',
+          300: '#e8a9ff',
+          400: '#da73ff',
+          500: '#c937ff',
+          600: '#b518f5',
+          700: '#9a0cd4',
+          800: '#7f10ad',
+          900: '#68108c',
+          950: '#410064',
+        },
+        secondary: {
+          50: '#edfcfd',
+          100: '#d2f6f9',
+          200: '#aaedf3',
+          300: '#72dee9',
+          400: '#38c7d7',
+          500: '#18a8ba',
+          600: '#18889c',
+          700: '#1b6d7e',
+          800: '#1e5867',
+          900: '#1f4a57',
+          950: '#11313b',
+        },
+        dark: {
+          50: '#eef0f5',
+          100: '#dfe4ec',
+          200: '#c4ccd9',
+          300: '#9aa9be',
+          400: '#7486a4',
+          500: '#576b8c',
+          600: '#455574',
+          700: '#39465f',
+          800: '#313c50',
+          900: '#2b3444',
+          950: '#141929',
+        },
+      },
+      fontFamily: {
+        sans: ['Space Grotesk', 'sans-serif'],
+      },
+      boxShadow: {
+        neon: '0 0 5px theme(colors.primary.500), 0 0 20px theme(colors.primary.500)',
+        'neon-accent': '0 0 5px theme(colors.accent.500), 0 0 20px theme(colors.accent.500)',
+        'neon-secondary': '0 0 5px theme(colors.secondary.500), 0 0 20px theme(colors.secondary.500)',
+        glass: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+      },
+      backdropFilter: {
+        'glass': 'blur(4px)',
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

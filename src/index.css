@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+.glassmorphism {
+  @apply bg-dark-900/30 backdrop-blur-md border border-dark-800/50 rounded-2xl shadow-glass;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400;
+}
+
+.neon-border {
+  @apply relative;
+}
+
+.neon-border::before {
+  content: '';
+  @apply absolute inset-0 rounded-2xl p-[1px] bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 -z-10;
+  filter: blur(1px);
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, rgba(10, 20, 50, 0.5) 0%, rgba(10, 10, 30, 0.8) 100%);
+}
+
+/* 3D Card */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.tilt-card-content {
+  transform: translateZ(30px);
+}
+
+/* Progress Circle */
+.progress-ring {
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
