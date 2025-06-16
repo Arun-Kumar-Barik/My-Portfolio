@@ -77,7 +77,7 @@ export const education: Education[] = [
     institution: 'C.V. Raman Global University',
     degree: 'Bachelor of Technology',
     date: '2021 - 2025',
-    gpa: '8.75/10',
+    gpa: '8.86/10',
     courses: [
       'Object-Oriented Programming',
       'Database Management System',
